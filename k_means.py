@@ -4,9 +4,13 @@ import time
 from sklearn import cluster, metrics
 from scipy . io import arff
 
-path = './artificial/'
-databrut = arff . loadarff ( open ( path + "spiral.arff" , 'r') )
-datanp = np.array([ [ x [ 0 ] ,x [ 1 ] ] for x in databrut [ 0 ] ])
+#path = './artificial/'
+#databrut = arff . loadarff ( open ( path + "spiral.arff" , 'r') )
+#datanp = np.array([ [ x [ 0 ] ,x [ 1 ] ] for x in databrut [ 0 ] ])
+
+path = './dataset-rapport/'
+databrut = np.loadtxt ( open ( path + "y1.txt" , 'r') )
+datanp = np.array([ [ x [ 0 ] ,x [ 1 ] ] for x in databrut ])
 # Affichage en 2D
 # Extraire chaque valeur de features pour en faire une liste
 # Ex pour f0 = [ - 0 . 499261 , -1 . 51369 , -1 . 60321 , ...]
